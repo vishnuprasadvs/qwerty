@@ -1,0 +1,100 @@
+.hero_grid_section{
+  padding: 100px 0px;
+  .inner_wrapper{
+    .grid_item{
+      .col-md-6{
+        display: flex;
+        @media (max-width:990px) {
+          max-width: 100%;
+          flex: 0 0 auto;
+        }
+      }
+      .feature_image{
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-top: auto;
+        margin-bottom: auto;
+       height: 400px;
+       @media (max-width:1200px) {
+         height: 300px;
+       }
+       @media (max-width:570px) {
+        height: 200px;
+      }
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .body_copy{
+        padding: 50px 0 0 0;
+        @media (max-width:570px) {
+          padding: 20px 0 0 0;
+        }
+        h2{
+          text-transform: uppercase;
+          font-size: 30px;
+          margin-bottom: 18px;
+          color: #000;
+          @media (max-width:570px) {
+            font-size: 23px;
+          }
+          &::before{
+            content: "#";
+            color: #ff0000;
+            font-weight: 700;
+            margin-right: 10px;
+          }
+        }
+        p{
+          font-size: 18px;
+          line-height: 1.5;
+          letter-spacing: .5px;
+          font-weight: 500;
+          color: #000;
+          @media (max-width:990px) {
+            font-size: 15px;
+          }
+        }
+      }
+      &:nth-child(even){
+        flex-direction: row-reverse;
+        .body_copy{
+          text-align: right;
+          h2{
+            &::after{
+              content: "#";
+              color: #ff0000;
+              font-weight: 700;
+              margin-left: 10px;
+            }
+            &::before{
+              content: none;
+              color: #ff0000;
+              font-weight: 700;
+              margin-right: 0px;
+            }
+          }
+        }
+      }
+      &+.grid_item{
+        padding-top: 40px;
+        // padding-bottom: 40px;
+        margin-top:40px ;
+        margin-bottom:40px ;
+        border-top: 1px solid #000;
+        // border-bottom: 1px solid #000;
+
+      }
+    }
+  }
+}
+
+body{
+  background-color: rgba($color: #191718, $alpha: .1);
+  // background-color: rgba($color: #000, $alpha: 1);
+  
+
+}

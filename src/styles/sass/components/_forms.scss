@@ -1,0 +1,404 @@
+.login_form{
+  max-width: 400px;
+  margin: auto;
+  padding: 13px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  border: 1px solid rgba($color: #ff0000, $alpha: .5);
+  border-radius: 9px;
+  @media (max-width:570px) {
+    max-width: calc(100% - 30px);
+    }
+  input{
+    background-color: transparent;
+    border: 1px solid rgba($color: #000000, $alpha: .31);
+    font-size: 19px;
+    @media (max-width:990px) {
+    font-size: 15px;
+    }
+    &:focus{
+    background-color: transparent;
+    border-color: rgba($color: #000000, $alpha: .31);
+    outline: 2px solid rgba($color: #000000, $alpha: .31);
+    }
+  }
+  input:-internal-autofill-selected {
+    background-color: transparent;
+  }
+  .mb-3{
+    a{
+      color: #ff0000;
+      font-weight: 400;
+      text-decoration: none;
+      font-size: 14px;
+    }
+  }
+p{
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  a{
+    color: #ff0000;
+    text-decoration: none;
+  }
+}
+  .error_msg{
+    color: #ff0000;
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  .success_msg{
+    color: #32cd32;
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+}
+.btn-red{
+  background-color: #ff0000;
+  color: #fff;
+  font-weight: 500;
+  &:focus{
+    outline: none !important;
+    box-shadow:none;
+  }
+  &:hover{
+    color: #fff;
+  }
+  &.btn-border{
+    background-color: transparent;
+    color: #ff0000;
+    border: 1px solid #ff0000;
+    svg{
+      fill: #ff0000;
+    }
+  }
+}
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg{
+    margin-right: 4px;
+  }
+}
+.account_details{
+  padding-top: 60px;
+  padding-bottom: 40px;
+  background-color: #fefefe;
+  .account_setting_dropdown{
+    float: right;
+    position: relative;
+    &:hover{
+      .drop_down{
+        opacity: 1;
+        visibility: visible;
+        li{
+          margin-bottom: 6px;
+          span , a{
+            font-size: 15px;
+            font-weight: 400;
+            color: #000;
+            line-height: 1.3;
+          }
+        }
+      }
+      span{
+        svg{
+          transform: rotate(60deg);
+        }
+      }
+    }
+    span{
+      font-size: 16px;
+      line-height: 1;
+      color: #000;
+      font-weight: 400;
+      cursor: pointer;
+      svg{
+        width: 20px;
+        transition: .3s all ease-in-out;
+        height: auto;
+        margin-left: 6px;
+      }
+    }
+    .drop_down{
+      min-width: 150px;
+      background-color: white;
+      border-radius: 6px;
+      position: absolute;
+      right: 0;
+      top: 110%;
+      z-index: 1;
+      padding: 8px;
+      opacity: 0;
+      visibility: hidden;
+      transition: .2s all ease-in-out;
+      box-shadow: 0 0 30px 1px rgba($color: #000000, $alpha: .3);
+      a{
+        display: block;
+        text-transform: capitalize;
+        font-size: 16px;
+        line-height: 1;
+        color: #000;
+        font-weight: 400;
+        text-decoration: none;
+      }
+    }
+  }
+  .account_details_wrap{
+    .form{
+      text-align: center;
+      margin-top: -30px;
+      height: 30px;
+      position: relative;
+      z-index: 1;
+    
+    }
+    .profile_image{
+      width: 180px;
+      height: 180px;
+      margin: auto;
+      border-radius: 50%;
+      display: flex;
+      overflow: hidden;
+      background-color: #eee;
+      box-shadow: 0 0 20px 10px rgba($color: #ccc, $alpha: .5);
+      position: relative;
+      &::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        transition: .2s all ease-in-out;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba($color: #000000, $alpha: .5);
+        z-index: 1;
+        opacity: 0;
+      }
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+      label{
+        margin-right: 60px;
+        justify-content: center;
+        padding: 4px 0px;
+        align-items: center;
+        margin-left: auto;
+        width: 35px ;
+        display: flex ;
+        height: 35px ;
+        cursor: pointer;
+        border-radius: 5px;
+        background-color: #ff0000;
+        border-radius: 50%;
+        overflow: hidden;
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transition: .2s all ease-in-out;
+        transform: translate(-50% , -50%);
+        z-index: 2;
+        svg{
+          width: 20px;
+          height: 20px;
+        }
+        color: #fff;
+      }
+      input{
+        width: fit-content !important;
+        font-size: 17px;
+        color: #b8b8b8;
+
+      }
+    
+   
+    }
+    h2{
+      font-size: 40px;
+      text-align: center;
+      font-weight: 400;
+      color: #000;
+      margin-bottom: 20px;
+      @media (max-width:990px) {
+        font-size: 34px;
+      }
+      @media (max-width:570px) {
+        font-size: 28px;
+      }
+    }
+    .account_cred_btn{
+      display: flex;
+      button{
+        margin-right: 5px;
+      }
+    }
+    .details_box{
+      padding-top: 20px;
+      &>div{
+        @media (max-width:990px) {
+          max-width:100%;
+          flex: 0 0 auto;
+        }
+      }
+      fieldset{
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        position: relative;
+        input , textarea,select{
+          background-color: transparent;
+          // color: #fff;
+          border-radius: 7px;
+        }
+        .hidden_field{
+          width: 54px;
+          height: auto;
+          outline: none !important;
+          display: none;
+        }
+        .custom_date_field{
+          padding: 0 5px;
+          width: 70% ;
+          outline: 1px solid #000;
+
+          &~input{
+          position: absolute;
+          top: 50%;
+          z-index: 1;
+          right: 0;
+          transform: translate(0,-50%);
+          }
+
+        }
+        label{
+          font-size: 18px;
+          width: 30%;
+          color: #000;
+          font-weight: 500;
+          // padding-right: 30px;
+          padding: 4px 30px 4px 0px;
+          @media (max-width:570px) {
+            font-size: 15px;
+          }
+        }
+        textarea{
+          width: 70%;
+          pointer-events: none;
+          border: none;
+          outline: 1px solid #000;
+          resize: none;
+          padding: 0 4px;
+
+        }
+        input{
+        padding: 0 4px;
+        @media (max-width:570px) {
+          font-size: 15px;
+        }
+
+        }
+        select{
+          padding: 0 4px;
+        }
+        input , select{
+          width: 70%;
+          pointer-events: none;
+          border: none;
+          appearance: none;
+          outline: 1px solid #000;
+
+
+        }
+      }
+    }
+    .profile_image_section{
+      position: relative;
+      // display: none;
+      #profile_image{
+        display: none;
+      }
+      .profile_image{
+
+        fieldset{
+          label{
+            position: absolute !important;
+          }
+        }
+      }
+  
+      max-width: 300px;
+      margin: auto;
+      label{
+        // position: absolute;
+      }
+      input{
+        // display: none;
+        pointer-events: none !important;
+        outline: none !important;
+      }
+      fieldset{
+        justify-content: center;
+        margin-bottom: 0;
+        label , input{
+          width: auto;
+          // pointer-events: none;
+          // outline: none;
+          padding: 0%;
+          text-align: center;
+          position: static;
+        }
+      }
+    }
+  }
+  &.editor_open{
+    .account_details_wrap{
+      .profile_image_section {
+        .profile_image{
+          label{
+            display: flex;
+            opacity: 0;
+
+          }
+          &:hover{
+            &::after{
+              opacity: 1;
+            }
+            label{
+              opacity: 1;
+            }
+          }
+        }
+      }
+      fieldset{
+        select{
+          padding: 0 ;
+        }
+        input , select , textarea , .custom_date_field{
+          outline: 1px solid #000;
+          appearance: auto;
+          pointer-events: all;
+          resize: none;
+        }
+        .hidden_field{
+          display: block;
+        }
+      }
+    }
+  }
+}
+.hidden{
+  display: none !important;
+}
+button{
+  &:focus{
+    outline: none;
+  }
+}
